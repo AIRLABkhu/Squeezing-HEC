@@ -287,20 +287,6 @@
   <div class="hero-body" style="text-align: center;">
     <h2 class="title">Overview</h2>
 
-    <img src="static/images/directory_structure_IMU.png" alt="Overview" style="max-width: 100%; height: auto; margin-bottom: 10px;">
-
-    <h2 class="subtitle has-text-centered">
-    <li>Conventional pose-based hand-eye calibration relies on the initial end-effector pose, often yielding inaccurate calibration (trajectory shown by the red arrow).</li>
-    <li>Our approach leverages deep reinforcement learning (DRL) to train an agent that adjusts the end-effector toward better poses to improve calibration accuracy (trajectory shown by the blue arrow).</li>
-    </h2>
-  </div>
-</section>
-
-<!-- Paper overview -->
-<section class="container is-max-desktop">
-  <div class="hero-body" style="text-align: center;">
-    <h2 class="title">Overview</h2>
-
     <img src="static/images/overview.png" alt="Overview" style="max-width: 100%; height: auto; margin-bottom: 10px;">
 
     <h2 class="subtitle has-text-centered">
@@ -315,7 +301,7 @@
   <div class="hero-body" style="text-align: center;">
     <h2 class="title">Main Architecture</h2>
 
-    <img src="static/images/archiecture.png" alt="Architecture" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+    <img src="static/images/architecture.png" alt="Architecture" style="max-width: 100%; height: auto; margin-bottom: 10px;">
 
     <h2 class="subtitle has-text-centered">
     <li>Our framework first estimates the end-effector pose using a pose estimation network.</li>
@@ -366,27 +352,25 @@
   <div class="hero-body" style="text-align: center;">
     <h2 class="title">Evaluation in Real-World Setting</h2>
 
-    <!-- Two images side-by-side -->
-    <div class="columns is-vcentered">
-      <div class="column">
-        <figure class="image is-4by3">
-          <img src="static/images/realworld1.png" alt="Real-world Experiment1" style="border-radius: 8px;">
-        </figure>
-        <h3 class="subtitle has-text-centered" style="margin-top: 8px;">
-          High-Precision Targeting
-        </h3>
-      </div>
-
-      <div class="column">
-        <figure class="image is-4by3">
-          <img src="static/images/realworld2.png" alt="Real-world Experiment2" style="border-radius: 8px;">
-        </figure>
-        <h3 class="subtitle has-text-centered" style="margin-top: 8px;">
-          Peg-Insertion
-        </h3>
-      </div>
+    <!-- First image -->
+    <div style="margin-bottom: 30px;">
+      <figure class="image is-4by3">
+        <img src="static/images/realworld1.png" alt="Real-world Experiment1" style="max-width: 100%; border-radius: 8px;">
+      </figure>
+      <h3 class="subtitle has-text-centered" style="margin-top: 8px;">
+        High-Precision Targeting
+      </h3>
     </div>
 
+    <!-- Second image -->
+    <div>
+      <figure class="image is-4by3">
+        <img src="static/images/realworld2.png" alt="Real-world Experiment2" style="max-width: 100%; border-radius: 8px;">
+      </figure>
+      <h3 class="subtitle has-text-centered" style="margin-top: 8px;">
+        Peg-Insertion
+      </h3>
+    </div>
   </div>
 </section>
 
