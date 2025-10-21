@@ -171,19 +171,16 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">PAIR360: A Paired Dataset of High-Resolution 360° Panoramic Images
-              and LiDAR Scans</h1>
+            <h1 class="title is-1 publication-title">Squeezing the Last Drop of Accuracy: Hand-Eye Calibration via Deep Reinforcement Learning-Guided Pose Tuning</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <!-- <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Geuun Kim</a>,</span> -->
-                GeunU Kim, Daeho Kim, Jaeyun Jang, Hyoseok Hwang
-                <br> {kyakl7232, kdh2769, yoon2926, hyoseok}@khu.ac.kr
+                <!-- <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Seunghui Shin</a>,</span> -->
+                Seunghui Shin, Daeho Kim, Hyoseok Hwang
+                <br> {jumin1116, kdh2769, hyoseok}@khu.ac.kr
                 <!-- <span class="author-block"> -->
                   <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Daeho Kim</a>,</span> -->
                   
-                  <!-- <span class="author-block"> -->
-                    <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jaeyun Jang</a>,</span> -->
                   <!-- <span class="author-block"> -->
                     <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hyoseok Hwang</a><sup>*</sup></span> -->
 
@@ -191,7 +188,7 @@
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                      <a href="http://airlab.khu.ac.kr/" target="_blank"> Kyung Hee University AIRLAB </a><br>RA-L 2024</span>
+                      <a href="http://airlab.khu.ac.kr/" target="_blank"> Kyung Hee University AIRLAB </a><br>RA-L 2025</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -250,46 +247,14 @@
 
 <!-- Teaser video-->
 
-<!-- End teaser video -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-        <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <!-- Your video here -->
-            <source src="static/videos/t1_engineer_re.mp4"
-            type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-            Panorama projection sample video: College of Engineering area in Traversal 1. 
-          </h2>
-        </div>
-        <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <!-- Your video here -->
-            <source src="static/videos/t2_bio3_re.mp4"
-            type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-            Panorama projection sample video: College of Life Science area in Traversal 2. 
-          </h2>
-        </div>
-        <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <!-- Your video here -->
-            <source src="static/videos/t3_library_re.mp4"
-            type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-            Panorama projection sample video: Central Library area in Traversal 3. 
-          </h2>
-        </div>
-        <!-- Add as many items as you like -->
-      </div>
+    <div class="container" style="text-align: center;">
+      <video autoplay controls muted loop height="100%">
+        <source src="static/videos/t1_engineer_re.mp4" alt="Video" type="video/mp4">
+      </video>
     </div>
   </div>
-</div>
 </section>
 
 <style>
@@ -307,568 +272,135 @@
   <div class="container is-fullhd"> 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">PAIR360 Dataset</h2>
+        <h2 class="title is-3">Abstract</h2>
         <ul>        
-          <li>This dataset provides 360 equirectangular image set with LiDAR point cloud from Insta360 pro2 - Velodyne VLP-32C system. </li>
-          <li> Moreover, We use pre-trained foundation model, Depth-Anything, to make depth map and semantic segmentation labels. </li>
+          <li>Hand-eye calibration is a fundamental task in robotics, requiring high precision to ensure accurate manipulation. This is especially crucial for recent markerless methods, which depend on precise pose estimation for effective end-effector calibration. In this paper, we propose a novel approach that improves calibration performance by adjusting the end-effector's pose to reduce prediction error. Our method utilizes a reward structure derived from trained pose estimation networks, enabling a Soft Actor-Critic-Discrete agent to learn in a simulated environment how to enhance calibration performance through action selection. Our experiments show that calibration results achieved with our method outperform those from initial poses alone in both markerless and marker-based methods. Real-world experiments further validate the efficacy of our approach in actual robotic systems. These results demonstrate that our proposed method effectively enhances the performance of pose estimation-based hand-eye calibration. </li>
         </ul>
-
-        <div>
-          <img src="static/images/fig3_pair360_overview_3_nobg.png" alt="Overview" />
-          <br><br>
-        </div>
-
-        <div class="content has-text-justified">
-          <div class="columns">
-            <div class="column">
-              <h3>Data</h3>
-              <ul>
-                <li>360 equirectangular images (7680 x 3840)
-                  <ul>
-                    <li>RGB</li>
-                    <li>Depth</li>
-                  </ul>
-                </li>
-                <li>Fish eye images (3840 x 2880)
-                  <ul>
-                    <li>RGB</li>
-                  </ul>
-                </li>
-                <li>LiDAR point clouds (32 channels)</li>
-                <li>IMU and GPS</li>
-                <li>Panormic annotations</li>
-                <ul>
-                  <li>Semantic segmentation labels</li>
-                  <li>Depth map</li>
-                </ul>
-                <li>3D point cloud map</li>
-              </ul>
-              <h3>Weather condition</h3>
-              <ul>
-                <li>Sunny</li>
-                <li>Cloudy</li>
-                <li>Sunrising</li>
-              </ul>
-            </div>
-            <div class="column">
-              <h3>Area</h3>
-              <ul>
-                <li>We capture 7 areas for 3 times in the Kyung Hee University International Campus
-                  <ul>
-                    <li>College of Engineering</li>
-                    <li>College of Life Science</li>
-                    <li>College of Physical Education</li>
-                    <li>Central Library</li>
-                    <li>1st Dormitory</li>
-                    <li>2nd Dormitory</li>
-                    <li>Parking Lot & Peace Amphitheater</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </section>
 <!-- End paper abstract -->
 
-<!-- Data Directory-->
+<!-- Paper overview -->
 <section class="container is-max-desktop">
-  <div class="hero-body">
-    <h2 class="title">Data Directory</h2>
-    <div class="container">
-      <!-- <div id="results-carousel" class="carousel results-carousel" style="text-align: center;"> -->
-        <div class="item">
-          <img src="static\images\directory_structure_IMU.png" >
-          <h2 class="subtitle has-text-centered">
-            Sensor Setup & Area Layout.  
-          </h2>
-          <img class="second-image" src="static/images/insta_cam.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            The Insta360 pro2 has six lenses, and they store original fisheye video. we store extract fisheye images and saved each origin'#' folder.
-            The z-axis is front of camera.
-          </h2>
-        </div>
-        <!-- <div class="item">
-          <img class="second-image" src="static/images/insta_cam.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            The Insta360 pro2 has six lenses, and they store original fisheye video. we store extract fisheye images and saved each origin'#' folder.
-            The z-axis is front of camera.
-          </h2>
-        </div> -->
-      <!-- </div> -->
-    </div>
+  <div class="hero-body" style="text-align: center;">
+    <h2 class="title">Overview</h2>
+
+    <img src="static/images/directory_structure_IMU.png" alt="Overview" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+
+    <h2 class="subtitle has-text-centered">
+    <li>Conventional pose-based hand-eye calibration relies on the initial end-effector pose, often yielding inaccurate calibration (trajectory shown by the red arrow).</li>
+    <li>Our approach leverages deep reinforcement learning (DRL) to train an agent that adjusts the end-effector toward better poses to improve calibration accuracy (trajectory shown by the blue arrow).</li>
+    </h2>
   </div>
 </section>
 
-<!-- Sensor Setup & Data Area -->
-<!-- <section class="container is-max-desktop">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-       <div class="item">
-        <img src="static\images\sensor_setup_data_area.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Directory layout for a single sequence. 
-        </h2>
-        </div>
-    </div>
-  </div>
-</section> -->
-<!-- Sensor Setup & Data Area -->
+<!-- Paper overview -->
 <section class="container is-max-desktop">
-  <div class="hero-body">
-    <h2 class="title">Sensor Setup & Data Area</h2>
-    <img src="static\images\sensor_setup_data_area.jpg" alt="MY ALT TEXT"/>
-    <!-- <h2 class="subtitle has-text-centered">
-      Sensor Setup & Area Layout.  
-    </h2> -->
-    <h2 class="title">Sequences</h2>
-    <!-- <h3>Sequence0: red / Sequence1: orange / Sequence2: green / Sequence3: blue / Sequence4: purple / Sequence5: black</h3> -->
-    <!-- <h3 class="subtitle">Traversal 1</h3> -->
-    <div class="container" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
-      <div>
-          <img class="map-image" src="static/images/sequence/t1/fig8-traversal1-trajectory.png" >
-          <h2 class="subtitle has-text-centered">
-            GPS Trajectories in traversal 1
-          </h2>
-      </div>
-      <div>
-          <img class="map-image" src="static/images/sequence/t2/fig8_t2.png" >
-          <h2 class="subtitle has-text-centered">
-            GPS Trajectories in traversal 2
-          </h2>
-      </div>
-      <div>
-          <img class="map-image" src="static/images/sequence/t3/fig8_t3.png" >
-          <h2 class="subtitle has-text-centered">
-            GPS Trajectories in traversal 3
-          </h2>
-      </div>
-  </div>
+  <div class="hero-body" style="text-align: center;">
+    <h2 class="title">Overview</h2>
+
+    <img src="static/images/directory_structure_IMU.png" alt="Overview" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+
+    <h2 class="subtitle has-text-centered">
+    <li>Conventional pose-based hand-eye calibration relies on the initial end-effector pose, often yielding inaccurate calibration (trajectory shown by the red arrow).</li>
+    <li>Our approach leverages deep reinforcement learning (DRL) to train an agent that adjusts the end-effector toward better poses to improve calibration accuracy (trajectory shown by the blue arrow).</li>
+    </h2>
   </div>
 </section>
 
-<!-- Image carousel -->
-<!-- <section class="hero is-small"> -->
+<!-- Main Architecture -->
 <section class="container is-max-desktop">
-  <div class="hero-body">
-    <h2 class="title">Dataset</h2>
-    <div class="container" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
-      <div>
-        <img src="static/images/eachArea/sample/engineer/3x3.png" alt="engineer" class="three-image"/>
-        <img src="static/images/eachArea/sample/sport/3x3.png" alt="sport" class="three-image"/>
-      </div>
-      <div>
-        <img src="static/images/eachArea/sample/1stdorm/3x3.png" alt="1stdorm" class="three-image"/>
-        <img src="static/images/eachArea/sample/2nddorm/3x3.png" alt="2nddorm" class="three-image"/>
-      </div>
-      <!-- <div id="results-carousel" class="carousel results-carousel" style="text-align: center;"> -->
-        <!-- <div class="item">
-        </div>
-        <div class="item">
-        </div>
-        <div class="item">
-        </div>
-        <div class="item">
-        </div> -->
-      </div>
-    </div>
+  <div class="hero-body" style="text-align: center;">
+    <h2 class="title">Main Architecture</h2>
+
+    <img src="static/images/directory_structure_IMU.png" alt="Architecture" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+
+    <h2 class="subtitle has-text-centered">
+    <li>Our framework first estimates the end-effector pose using a pose estimation network.</li>
+    <li>Subsequently, a SAC-Discrete agent is trained to adjust the end-effector to poses that yield lower estimation errors.</li>
+    <li>Hand-eye calibration is then performed using the known forward kinematics and the refined end-effector poses.</li>
+
+    </h2>
   </div>
 </section>
-<!-- End image carousel -->
-<!-- Experiments -->
+  
+<!-- Evaluation -->
 <section class="container is-max-desktop">
-  <div class="hero-body">
-    <h2 class="title">Trajectory Estimation</h2>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-        <div class="item">
-          <img src="static/images/experiments/fig10-0831-bio-7-traj.png" alt="0831bio7" class="responsive-image"/>
-          <h2 class="subtitle has-text-centered">0831bio7</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/experiments/fig10-dorm2-resized.png" alt="0825dorm2" class="responsive-image"/>
-          <h2 class="subtitle has-text-centered">0825dorm2</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/experiments/fig10-dorm1-resized.png" alt="1104dorm1" class="responsive-image"/>
-          <h2 class="subtitle has-text-centered">1104dorm1</h2>
-        </div>
+  <div class="hero-body" style="text-align: center;">
+    <h2 class="title">Evaluation in Simulation</h2>
+
+    <!-- Markerless subsection -->
+    <h3 class="subtitle has-text-centered" style="margin-top: 20px; font-weight: bold;">
+      Markerless Calibration
+    </h3>
+    <img src="static/images/markerless_result.png" 
+         alt="Markerless Calibration Results" 
+         style="max-width: 100%; height: auto; margin-bottom: 10px;">
+    <p class="has-text-centered" style="max-width: 800px; margin: 0 auto;">
+      Our method significantly reduced estimation errors for hand-eye calibration. 
+      Trends in end-effector pose estimation matched those in calibration, 
+      as expected, since calibration depended directly on pose accuracy. 
+      These results confirmed that our approach effectively guided the end-effector toward poses that reduced errors, 
+      enhancing both pose estimation and calibration performance. 
+      Moreover, our method was modular and could be integrated into various pose estimation networks.
+    </p>
+
+    <!-- Marker-Based subsection -->
+    <h3 class="subtitle has-text-centered" style="margin-top: 40px; font-weight: bold;">
+      Marker-Based Calibration
+    </h3>
+    <img src="static/images/markerbased_result.png" 
+         alt="Marker-Based Calibration Results" 
+         style="max-width: 100%; height: auto; margin-bottom: 10px;">
+    <p class="has-text-centered" style="max-width: 800px; margin: 0 auto;">
+      The calibration performance was highly sensitive to marker pose accuracy; increased marker pose error led to larger calibration errors.
+      By guiding the end-effector to poses with lower estimation errors, our method effectively reduced errors in both marker pose estimation and hand-eye calibration, demonstrating its utility in improving marker-based settings.
+    </p>
+  </div>
+</section>
+
+<!-- Evaluation in Real-World Setting -->
+<section class="container is-max-desktop">
+  <div class="hero-body" style="text-align: center;">
+    <h2 class="title">Evaluation in Real-World Setting</h2>
+
+    <!-- Two images side-by-side -->
+    <div class="columns is-vcentered">
+      <div class="column">
+        <figure class="image is-4by3">
+          <img src="static/images/real_exp_markerless.png" alt="Real-world Markerless Experiment" style="border-radius: 8px;">
+        </figure>
+        <h3 class="subtitle has-text-centered" style="margin-top: 8px;">
+          Markerless Setup
+        </h3>
+      </div>
+
+      <div class="column">
+        <figure class="image is-4by3">
+          <img src="static/images/real_exp_markerbased.png" alt="Real-world Marker-Based Experiment" style="border-radius: 8px;">
+        </figure>
+        <h3 class="subtitle has-text-centered" style="margin-top: 8px;">
+          Marker-Based Setup
+        </h3>
       </div>
     </div>
+
   </div>
 </section>
-<!-- End Experiments -->
-
-<!-- Dataset Distribution Area -->
-<section class="container is-max-desktop">
-  <div class="hero-body">
-    <h2 class="title">Download</h2>
-    <div class="container">
-      <!-- <div id="results-carousel" class="carousel results-carousel" style="text-align: center;"> -->
-      <div class="item">
-        <table>
-          <tr>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;">  </th>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;"> Area </th>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;"> Sequence </th>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;"> Dataset </th>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;"> LiDAR & Cam1 </th>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;">Other Calibration </th>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;"> Extra </th>
-          </tr>
-          <!-- Table content -->
-          <tr>
-              <th rowspan="18" , style="vertical-align: middle; text-align: center;">Traversal 1</a></th>
-              <th rowspan="4" , style="vertical-align: middle; text-align: center;"> College of Engineering </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/VEkonfTYW">Dataset</a></td>
-              <td rowspan="4" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/Sjx88oQjn">Extrinsic</a></td>
-              <td rowspan="18" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/d7yIuVm5x">Params</a></td>
-              <td rowspan="4" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/3O1fPrxML">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/KBNSCdGTX">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/4RYohrq7F">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">3</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/0Hm0mT1g5">Dataset</a></td>
-          </tr>
-          <tr>
-              <th rowspan="5", style="vertical-align: middle; text-align: center;"> College of Life Science  </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/MGDUJP83O">Dataset</a></td>
-              <td rowspan="5" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/091ede7lu">Extrinsic</a></td>
-              <td rowspan="5" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/0tQOsIJXI">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/murqBuBP5">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/VbZY3CLiA">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">3</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/0juoVQYjm">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">4</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/RCPeJq3uQ">Dataset</a></td>
-          </tr>
-          <tr>
-            <th rowspan="3", style="vertical-align: middle; text-align: center;"> College of Physical Education </th>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/wA1XN7fGT">Dataset</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/Gj5TIf45b">Extrinsic</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/vOFZDQ9Fg">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/Eq6JaOoYv">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/ugrsHHuHQ">Dataset</a></td>
-          </tr>
-          <tr>
-              <th rowspan="1", style="vertical-align: middle; text-align: center;"> Central Library </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/vcw7zRNmX">Dataset</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/OEVyyDxKL">Extrinsic</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/D7lRe6Sg4">Data</a></td>
-          </tr>
-          <tr>
-              <th rowspan="2", style="vertical-align: middle; text-align: center;"> 1st Dormitory </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/BEYKIlC4h">Dataset</a></td>
-              <td rowspan="2" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/Sjx88oQjn">Extrinsic</a></td>
-              <td rowspan="2" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/6azh8iAfu">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/tqvAv37L1">Dataset</a></td>
-          </tr>
-            <tr>
-              <th rowspan="1", style="vertical-align: middle; text-align: center;"> 2nd Dormitory </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/lg2zCk9MI">Dataset</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/Gj5TIf45b">Extrinsic</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/1rTwDMWhU">Data</a></td>
-          </tr>
-          <tr>
-              <th rowspan="2", style="vertical-align: middle; text-align: center;"> Parking Lot & Peace Amphitheater </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/Ay56l7zsS">Dataset</a></td>
-              <td rowspan="2" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/OEVyyDxKL">Extrinsic</a></td>
-              <td rowspan="2" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/XVGjNhK6G">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/yx45QQ64q">Dataset</a></td>
-          </tr>
-
-          <!-- Traversal 2 -->
-          <tr class="thick-border">
-            <th rowspan="16", style="vertical-align: middle; text-align: center;"> Traversal 2 </th>
-            <th rowspan="3", style="vertical-align: middle; text-align: center;"> College of Engineering </th>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/Or22H1tA9">Dataset</a></td>
-            <td rowspan="16" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/9t5bszba2">Extrinsic</a></td>
-            <td rowspan="16" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/d7yIuVm5x">Params</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/K4beV4Hs6">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/6XhEVa5xc">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/EmGZ4eGLh">Dataset</a></td>
-          </tr>
-          <tr>
-              <th rowspan="4", style="vertical-align: middle; text-align: center;"> College of Life Science  </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/5CEgzHU3i">Dataset</a></td>
-              <td rowspan="4" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/lA5ctGdqG">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/UNcBrDz1x">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/ECl3oHBaU">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">3</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/2zp07xT9I">Dataset</a></td>
-          </tr>
-          <tr>
-            <th rowspan="4", style="vertical-align: middle; text-align: center;"> College of Physical Education </th>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/SMpyfhrky">Dataset</a></td>
-            <td rowspan="4" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/lCT1o8BX1">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/70s0ZJ81y">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/S3od5yXBt">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">3</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/rWXczffnL">Dataset</a></td>
-          </tr>
-            <tr>
-              <th rowspan="1", style="vertical-align: middle; text-align: center;"> Central Library </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="https://airlabdata.synology.me:5001/sharing/EzbCTu5ro">Dataset</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/8kHnwYHRk">Data</a></td>
-          </tr>
-          <tr>
-              <th rowspan="2", style="vertical-align: middle; text-align: center;"> 1st Dormitory </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/jQToWct9W">Dataset</a></td>
-              <td rowspan="2" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/SI5MLX70T">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/GohEhTfcS">Dataset</a></td>
-          </tr>
-          <tr>
-              <th rowspan="2", style="vertical-align: middle; text-align: center;"> 2nd Dormitory </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/Z3V4Hgqxx">Dataset</a></td>
-              <td rowspan="2" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/LHBxjFROT">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/W7A0uflwd">Dataset</a></td>
-          </tr>
-
-          <!-- Traversal 3 -->
-          <tr class="thick-border">
-            <th rowspan="18", style="vertical-align: middle; text-align: center;"> Traversal 3 </th>
-            <th rowspan="3", style="vertical-align: middle; text-align: center;"> College of Engineering </th>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/EONwSA8wP">Dataset</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/Kp3mqMMHg">Extrinsic</a></td>
-            <td rowspan="18" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/d7yIuVm5x">Params</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/Z3l144SjG">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/vcYh29hLL">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/oHZI69Qoc">Dataset</a></td>
-          </tr>
-          <tr>
-              <th rowspan="6", style="vertical-align: middle; text-align: center;"> College of Life Science  </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td><a href="https://airlabdata.synology.me:5001/sharing/iGBSYAJVh">Dataset</a></td>
-              <td rowspan="6" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/ParxRflvG">Extrinsic</a></td>
-              <td rowspan="6" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/15RO9xbCd">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/59ypByzLb">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/lrfSHw5rY">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">3</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/gjpkiWiFk">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">4</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/7Xt0eTUIF">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">5</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/GgsumNSBK">Dataset</a></td>
-          </tr>
-          <tr>
-            <th rowspan="3", style="vertical-align: middle; text-align: center;"> College of Physical Education </th>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/CakhIIwYF">Dataset</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/ParxRflvG">Extrinsic</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/LCRe6vNFD">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/N1aN8J5N3">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/vJrNmVNxJ">Dataset</a></td>
-          </tr>
-          <tr>
-            <th rowspan="1", style="vertical-align: middle; text-align: center;"> Central Library </th>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/z0CiTlzZt">Dataset</a></td>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/V0VIltXnN">Extrinsic</a></td>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/B2mBJ88BZ">Data</a></td>
-          </tr>
-          <tr>
-            <th rowspan="3", style="vertical-align: middle; text-align: center;"> 1st Dormitory </th>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/eOG5OYPSj">Dataset</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/Kp3mqMMHg">Extrinsic</a></td>
-            <td rowspan="3" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/hF9hqOovJ">Data</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">1</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/ZWiOhrZ9A">Dataset</a></td>
-          </tr>
-          <tr>
-            <td rowspan="1" , style="vertical-align: middle; text-align: center;">2</a></td>
-            <td><a href="https://airlabdata.synology.me:5001/sharing/qzDhpaCKy">Dataset</a></td>
-          </tr>
-          <tr>
-              <th rowspan="1", style="vertical-align: middle; text-align: center;"> 2nd Dormitory </th>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;">0</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="https://airlabdata.synology.me:5001/sharing/X4zXsEXi5">Dataset</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/ParxRflvG">Extrinsic</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/jZY1ZAxBb">Data</a></td>
-          </tr>
-          <tr>
-              <th rowspan="1", style="vertical-align: middle; text-align: center;"> Parking Lot & Peace Amphitheater </th>
-              <td , style="vertical-align: middle; text-align: center;">0</td>
-              <td , style="vertical-align: middle; text-align: center;"><a href="https://airlabdata.synology.me:5001/sharing/OtLoS24Sm">Dataset</a></td>
-              <td , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/V0VIltXnN">Extrinsic</a></td>
-              <td rowspan="1" , style="vertical-align: middle; text-align: center;"><a href="http://airlabdata.synology.me:5000/sharing/zYcrD03uJ">Data</a></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  <h2 class="subtitle has-text-centered">
-    Notice: We performed camera calibration after rotating 90° counterclockwise with the human head facing up in raw fisheye images.
-    So we give raw fisheye frame, but in actual use, you have to rotate the fisheye image 90° counterclockwise first.
-  </h2>
-</section>
-<!-- Dataset Distribution Area -->
-
-<!-- Tools -->
-<section class="container is-max-desktop">
-  <div class="hero-body">
-    <h2 class="title">Tools</h2>
-    <!-- <div class="license-text">  -->
-      <div class="tool_table">
-      <table>
-        <tr>
-          <th>File</th>
-          <th>Description</th>
-        </tr>
-        <!-- Table content -->
-        <tr>
-            <th><a href="static\code\pcd2bag.py" download="pcd2bag.py">   pcd2bag.py  </a> </th>
-            <td>Convert pcd files, GPS.csv and GYRO.csv file to ROSbag</td>
-        </tr>
-        <tr>
-          <th><a href="static\code\Lidar_fisheye_projection.py" download="Lidar_fisheye_projection.py">   Lidar_fisheye_projection.py  </a></th>
-          <td> Project onto fisheye image</td>
-        </tr>
-        <tr>
-          <th><a href="static\code\Lidar_pano_projection.py" download="Lidar_pano_projection.py"> Lidar_pano_projection.py </a></th>
-          <td> Project onto panorama image </td>
-        </tr>
-        <tr>
-          <th><a href="static\code\GPS_mapping.py" download="GPS_mapping.py"> GPS_mapping.py</a></th>
-          <td> Map GPS data and save html file </td>
-        </tr>
-        <tr>
-          <th><a href="static\code\segmentation_labels.txt" download="segmentation_labels.txt"> segmentation_labels.txt</a></th>
-          <td> Category and RGB value of segmentation labels </td>
-        </tr>
-      </div>
-      </table>
-  </div>
-</section>
-<!-- End Tools -->
-
-
-<!-- License -->
-<section class="container is-max-desktop">
-  <div class="hero-body">
-    <h2 class="title">License</h2>
-    <div class="license-text"> 
-      The PAIR360 dataset is provided under the Open Database License (available <a href="https://opendatacommons.org/licenses/odbl/1-0/">here</a>).
-      This means that you are free to use, distribute, modify and create derivative works from this dataset, provided that you give appropriate credit to our work. In addition, any adapted version of this dataset that is used publicly must be released under the same licence, and any redistribution must remain open.
-      When using the PAIR360 dataset, please ensure that you acknowledge our work by citing the referenced paper.
-    </div>
-  </div>
-</section>
-<!-- End License -->
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @article{kim2024pair360,
-                  title={PAIR360: A Paired Dataset of High-Resolution 360$$\{$$\}$\^{}$\{$$\backslash$circ$\}$ $ Panoramic Images and LiDAR Scans},
-                  author={Kim, Geunu and Kim, Daeho and Jang, Jaeyun and Hwang, Hyoseok},
-                  journal={IEEE Robotics and Automation Letters},
-                  year={2024},
-                  publisher={IEEE}
+        @article{,
+                  title={},
+                  author={},
+                  journal={},
+                  year={},
+                  publisher={}
                 }
       </code></pre>
     </div>
